@@ -28,7 +28,7 @@
 7.     Вспомните или найдите информацию о том, какие бывают виды связей между таблицами.
 		https://habr.com/ru/post/488054/
 	Примените один вид связи для созданных таблиц.
-![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/"ER Diagram.png")
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/"ER Diagram".png)
 
 8.     Вспомните или найдите информацию о том, что такое ER-диаграммы и зачем они нужны.
 		https://habr.com/ru/post/440556/
