@@ -1,4 +1,4 @@
-# Internship---sprint-2
+# Internship-Sprint-2
 
 Тестирование баз данных
 
@@ -19,56 +19,29 @@
 4.     Создайте подключение к БД.
 
 5.     Создайте две таблицы.
-		- create table Users (ID int, Name text, Type text, Date text, Description text);
-		- create table Clients (ID int, Name text, Country text, City text, Description text);
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/01.png)
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/02.png)
 
 6.     Заполните созданные таблицы данными (данные смотрите ниже).
-		- insert into Users (ID, Name, Type, Date, Description)
-		  values (0, 'N1', 'T1', null, 'D1');
-		
-		- insert into Users (ID, Name, Type, Date, Description)
-		  values (1, 'N2', 'T2', 'D2', 'D2');
-		
-		- insert into Users (ID, Name, Type, Date, Description)
-		  values (2, 'N3', null, 'D3', 'D3');
-		
-		- insert into Clients (ID, Name, Country, City, Description)
-		  values (0, 'N1', 'C1', 'C1', 'D1');
-		
-		- insert into Clients (ID, Name, Country, City, Description)
-		  values (1, 'N2', 'C2', null, 'D2');
-		
-		- insert into Clients (ID, Name, Country, City, Description)
-		  values (2, 'N3', 'C3', 'C3', null);
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/00.png)
 
-7.     Вспомните или найдите информацию о том, какие бывают виды связей между таблицами. Примените один вид связи для созданных таблиц.
+7.     Вспомните или найдите информацию о том, какие бывают виды связей между таблицами.
 		https://habr.com/ru/post/488054/
+	Примените один вид связи для созданных таблиц.
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/ER Diagram.png)
 
 8.     Вспомните или найдите информацию о том, что такое ER-диаграммы и зачем они нужны.
 		https://habr.com/ru/post/440556/
 
 9.     Заполните таблицы уникальными данными (важно: не меняйте ячейки с null) и сделайте скриншот получившейся таблицы. 
-		- insert into Users (ID, Name, Type, Date, Description)
-		  values (3, 'John', 'amin', null, 'check');
-		
-		- insert into Users (ID, Name, Type, Date, Description)
-		  values (4, 'Ann', 'dev', '01.01.2022', 'create');
-		
-		- insert into Users (ID, Name, Type, Date, Description)
-		  values (5, 'Sasha', null, '10.03.2022', 'test');
-		
-		- insert into Clients (ID, Name, Country, City, Description)
-		  values (3, 'Kate', 'USA', 'Eugene', 'cold');
-		
-		- insert into Clients (ID, Name, Country, City, Description)
-		  values (4, 'Bob', 'Germany', null, 'warm');
-		
-		- insert into Clients (ID, Name, Country, City, Description)
-		  values (5, 'Lucy', 'Japan', 'Date', null);		
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/09.png)	
 
 10.  Удалите строку с ID равным 1 из таблицы Users и сделайте скриншот получившегося результата. 
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/10.1.png)
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/10.2.png)
 
 11.  Добавьте в таблицу Users строку с ID равным 1 и сделайте скриншот получившегося результата.
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/11.png)
 
 ЭТАП 2. РАБОТА С ДАННЫМИ
 
@@ -79,25 +52,16 @@
 	select * from Clients;
 
 -- 3. Посчитайте все записи в таблице Clients, где Name не равно null
-	select count(*) from Clients where not Name='null';
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/03.png)
 
 -- 4. Выведите все записи из таблицы Users, где Description не равно D3, а Type не равно null
-	select * from Users where not Description='D3' or Type='null';
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/04.png)
 
 -- 5. Добавьте к 4-му запросу группировку по полю Type. Сделайте скриншот получившегося результата
-	select Type from Users 
-	where not Description='D3' or Type='null'
-	group by Type;
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/05.png)
 
 -- 6. Добавьте к 5-му запросу сортировку по возрастанию по полю Type
-	select Type from Users 
-	where not Description='D3' or Type='null'
-	group by Type
-	order by Type asc;
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/06.png)
 
 -- 7. Выведите Name из двух таблиц, где Description не равно null
-	select Users.Name as Users, Clients.Name as Clients 
-	from Users
-	left join Clients
-	on Users.Description=Clients.Description
-	where Users.Description is not null or Clients.Description is not null;
+![Image alt](https://github.com/EugeneVovk/Internship-Sprint-2/raw/main/img/07.png)
