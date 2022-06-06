@@ -65,8 +65,10 @@
 		  values (5, 'Lucy', 'Japan', 'Date', null);		
 
 10.  Удалите строку с ID равным 1 из таблицы Users и сделайте скриншот получившегося результата. 
-
+		- delete from Users where ID=1;
 11.  Добавьте в таблицу Users строку с ID равным 1 и сделайте скриншот получившегося результата.
+		- insert into Users (ID, Name, Type, Date, Description)
+		  values (1, 'N2', 'T2', 'D2', 'D2');
 
 ЭТАП 2. РАБОТА С ДАННЫМИ
 
